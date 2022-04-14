@@ -1,0 +1,57 @@
+<div class="flex social">
+    {{ $title := .Title }}
+    {{ $url := printf "%s" .Permalink | absLangURL }}
+    {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n"
+        $url "\n"
+    }}
+
+
+    <div
+        class="primary-color resp-sharing-button__link"
+        onclick="registerLikes()"
+    >
+        {{ partial "icons/heart.html" . }}
+    </div>
+
+    <a
+        class="primary-color resp-sharing-button__link"
+        href="https://facebook.com/sharer/sharer.php?u={{ $url }}&utm_source=facebook&utm_medium=social-post"
+        target="_blank"
+        rel="noopener"
+        aria-label="Facebook share"
+    >
+        {{ partial "icons/facebook.html" . }}
+    </a>
+
+    <a
+        class="primary-color resp-sharing-button__link"
+        href="https://twitter.com/intent/tweet/?url={{ $url }}&utm_source=twitter&utm_medium=social-post&text={{ $title }}&via={{ with .Site.Social.twitter }}
+            {{ . }}
+        {{ end }}"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter share"
+    >
+        {{ partial "icons/twitter.html" . }}
+    </a>
+
+    <a
+        class="primary-color resp-sharing-button__link"
+        href="mailto:?subject=Check%20out%20{{ $title }}.&body={{ $body }}"
+        target="_self"
+        rel="noopener"
+        aria-label="Mail share"
+    >
+        {{ partial "icons/email.html" . }}
+    </a>
+
+    <a
+        class="primary-color resp-sharing-button__link"
+        href="https://reddit.com/submit/?url={{ $url }};resubmit=true&amp;title={{ $title }}&utm_source=reddit&utm_medium=social-post"
+        target="_blank"
+        rel="noopener"
+        aria-label="Reddit share"
+    >
+        {{ partial "icons/reddit.html" . }}
+    </a>
+</div>

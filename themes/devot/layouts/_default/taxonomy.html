@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <div class="flex main">
+        <div class="flex position-relative main-container">
+            {{- partial "sidebar.html" . -}}
+            <div class="content">
+                <div class="content-container">
+                    {{ partial "taxonomyPost.html" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

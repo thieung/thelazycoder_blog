@@ -1,0 +1,111 @@
+<div
+    class="flex flex-column align-item-center font-sans-serif font-normal sidebar"
+>
+    <div class="sticky-table">
+        <div class="position-relative sidebar-avatar">
+            <img
+                src="/images/avatar.webp"
+                class="sidebar-avatar-img"
+                alt="Avatar"
+                width="200"
+                height="200"
+            />
+
+            <div id="mode"></div>
+        </div>
+
+        <div class="text-align-center font-bold sidebar-title">
+            <a href="/">TheLazyCoder</a>
+            <!-- {{ partial "icons/rss.html" . }} -->
+
+            {{ $url := urls.Parse .Permalink }}
+            {{ $trimUrl :=
+                strings.TrimPrefix "/en" $url.Path
+            }}
+        </div>
+
+        <div
+            class="text-align-center font-sans-serif font-normal primary-color sidebar-language"
+        >
+            {{ if eq .Site.Language.Lang "vn" }}
+                <p>vn</p>
+                <p class="sidebar-language-slash">/</p>
+                <a href="/en{{ $trimUrl }}">en</a>
+            {{ else }}
+                <a href="{{ $trimUrl }}">vn</a> /
+                <p>en</p>
+            {{ end }}
+        </div>
+
+        <div class="flex align-item-center sidebar-social">
+            <a
+                class="primary-color resp-sharing-button__link"
+                href="https://github.com/thieung"
+                target="_blank"
+                rel="noopener"
+                aria-label="Github profile"
+            >
+                {{ partial "icons/github.html" . }}
+            </a>
+
+            <a
+                class="primary-color resp-sharing-button__link"
+                href="https://www.linkedin.com/in/thieunv/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Linkedin profile"
+            >
+                {{ partial "icons/linkedin.html" . }}
+            </a>
+
+            <a
+                class="primary-color resp-sharing-button__link"
+                href="https://www.facebook.com/The-Lazy-Coder-Blog-109490151733871"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook profile"
+            >
+                {{ partial "icons/facebook.html" . }}
+            </a>
+
+            <a
+                class="primary-color resp-sharing-button__link"
+                href="https://www.instagram.com/thieunguyen.it/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram profile"
+            >
+                {{ partial "icons/email.html" . }}
+            </a>
+        </div>
+
+        <!-- <div class="sponsor"> -->
+        <!--     <p class="text-align-center">Buy me a coffee</p> -->
+        <!--     <div class="flex sponsor-container"> -->
+        <!--         <button -->
+        <!--             class="sponsor-button position-relative" -->
+        <!--             id="connect-metamask" -->
+        <!--             aria-label="Ethereum sponsor" -->
+        <!--         > -->
+        <!--             {{ partial "icons/ethereum.html" . }} -->
+        <!--         </button> -->
+        <!---->
+        <!--         <button -->
+        <!--             class="sponsor-button position-relative" -->
+        <!--             id="connect-phantom" -->
+        <!--             aria-label="Solana sponsor" -->
+        <!--         > -->
+        <!--             {{ partial "icons/solana.html" . }} -->
+        <!--         </button> -->
+        <!---->
+        <!--         <button -->
+        <!--             class="sponsor-button position-relative" -->
+        <!--             id="connect-polygon" -->
+        <!--             aria-label="Polygon sponsor" -->
+        <!--         > -->
+        <!--             {{ partial "icons/polygon.html" . }} -->
+        <!--         </button> -->
+        <!--     </div> -->
+        <!-- </div> -->
+    </div>
+</div>

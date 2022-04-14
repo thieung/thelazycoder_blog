@@ -1,0 +1,72 @@
+baseURL = 'https://thelazycoder.netlify.app/'
+languageCode = 'en-us'
+title = 'The Lazy Coder Blog'
+
+theme = 'devot'
+
+googleAnalytics = ''
+
+defaultContentLanguage = 'vn'
+
+pygmentsUseClasses = true
+
+[author]
+    name = "Thieu Nguyen"
+
+[outputFormats]
+    [outputFormats.RSS]
+        mediaType = "application/rss+xml"
+        baseName = "feed"
+
+[menu]
+    [[menu.main]]
+        name = "Posts"
+        pre = "home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Tags"
+        pre = "tag"
+        url = "/tags/"
+        weight = 3
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = true
+        [markup.goldmark.parser]
+            autoHeadingID = true
+            autoHeadingIDType = 'github'
+            [markup.goldmark.parser.attribute]
+                block = false
+                title = true
+        [markup.goldmark.renderer]
+            hardWraps = false
+            unsafe = false
+            xhtml = false
+        [markup.highlight]
+            codeFences = true
+            guessSyntax = true
+            hl_Lines = ""
+            lineNoStart = 1
+            lineNos = false
+            lineNumbersInTable = false
+            tabWidth = 4
+            noClasses = false
+
+[languages]
+    [languages.vn]
+        languageName = 'vn'
+    [languages.en]
+        languageName = 'en'
+
+[params]
+    description = "The place where I share my Dev's life/hobby and all about technical stuffs I know"
+    keywords = "TheLazyCoder, tech, life, hobby"
+    socialImage = "/images/cover.jpg"

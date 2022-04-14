@@ -1,0 +1,35 @@
+{{ define "main" }}
+    <div class="flex main">
+        <div class="flex position-relative main-container">
+            {{- partial "sidebar.html" . -}}
+
+
+            <div class="font-serif content">
+                <div class="position-relative content-container">
+                    <h1>{{ .Title }}</h1>
+                    {{ partial "metadata.html" . }}
+
+
+                    <br /><br />
+
+                    {{ .Content }}
+                </div>
+
+                {{ if .Params.isPost }}
+                    <div class="flex content-footer">
+                        {{ partial "tags.html" . }}
+                        {{ partial "social.html" . }}
+                    </div>
+
+                    <div class="comments-container">
+                        {{ partial "comments.html" . }}
+                    </div>
+                {{ end }}
+            </div>
+
+            {{ if .Params.isPost }}
+                {{ partial "tableOfContent.html" . }}
+            {{ end }}
+        </div>
+    </div>
+{{ end }}

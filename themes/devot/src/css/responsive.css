@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1600px) {
+    .table-of-content {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-container {
+        justify-content: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .content {
+        width: 700px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .main-container {
+        justify-content: center;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .content {
+        width: 80%;
+    }
+}
