@@ -7,7 +7,7 @@ self.addEventListener("install", function (event) {
                 "/images/avatar.png",
                 "/images/avatar.avif",
                 "/images/cover.webp",
-                "/images/cover.jpg",
+                "/images/cover.png",
                 "/images/cover.avif",
                 "/images/logo-light.svg",
                 "/images/logo-dark.svg",

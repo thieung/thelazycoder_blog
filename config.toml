@@ -69,4 +69,4 @@ pygmentsUseClasses = true
 [params]
     description = "The place where I share my Dev's life/hobby and all about technical stuffs I know"
     keywords = "TheLazyCoder, tech, life, hobby"
-    socialImage = "/images/cover.jpg"
+    socialImage = "/images/cover.png"
